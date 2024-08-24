@@ -1,0 +1,114 @@
+/* About Section */
+.about {
+    padding: 50px 20px; /* Horizontal padding for small screens */
+    /* app.css has Black background */ /* Black background */
+    height: auto; /* Allow height to adjust based on content */
+    box-sizing: border-box; /* Include padding in height calculation */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Change to column for better stacking */
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Fade-in animation */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box; /* Include padding in width calculation */
+    width: 100%; /* Ensure full width usage */
+  }
+  
+  .about-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow wrapping of items on smaller screens */
+    width: 100%; /* Ensure full width usage */
+  }
+  
+  .profile-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .about-text {
+    flex: 1;
+    padding-left: 30px;
+    max-width: 100%; /* Ensure text doesn't overflow */
+  }
+  
+  .about-container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 50px;
+    color: rgb(162, 162, 224); /* Light blue color */
+  }
+  
+  .about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  
+  .skills {
+    margin-top: 30px;
+    color:rgb(116, 69, 151); ;
+    font-size: 1.3rem;
+  }
+  
+  .skills h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: rgb(84, 62, 99); /* Pinkish highlight for skills heading */
+  }
+  
+  .skills ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .skills li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #998080;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center; /* Center text for small screens */
+    }
+  
+    .profile-pic {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 20px;
+    }
+  
+    .about-text {
+      padding-left: 0;
+      padding-right: 0; /* Added to avoid overflow */
+    }
+  
+    .skills {
+      margin-top: 20px;
+    }
+  }
+  

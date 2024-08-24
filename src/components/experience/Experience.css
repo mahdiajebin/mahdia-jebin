@@ -1,0 +1,92 @@
+/* Experience Section */
+.experience-section {
+  padding-top: 60px;
+  display: flex;
+  flex-direction: row;
+  height: 70vh; /* Ensure full height */
+  width: 80%;
+  margin: 0 auto; /* Center the section horizontally */
+  flex-wrap: wrap; /* Allows wrapping if content overflows */
+  align-items: stretch; /* Ensure columns stretch to fill height */
+  justify-content: center;   
+  opacity: 0;
+  animation: fadeIn 1s forwards; /* Fade-in animation */
+}
+
+.experience-columns {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.companies-column,
+.description-column {
+  flex: 1; /* Allow columns to grow and shrink */
+  padding: 50px;
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.companies-column {
+  border-right: 1px solid rgb(130, 130, 200);
+}
+
+.companies-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.companies-column li {
+  cursor: pointer;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid rgb(130, 130, 200);
+  border-radius: 5px;
+}
+
+.companies-column li:hover {
+  background-color: rgb(130, 130, 200);
+}
+
+.experience-section h1 {
+  margin-bottom: 40px;
+  font-size: 1.8rem;
+}
+
+.experience-columns h2 {
+  margin-bottom: 20px;
+  color: gray;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .experience-section {
+    flex-direction: column;
+    height: auto; /* Allow height to adjust automatically */
+    width: 90%; /* Ensure section fits well on smaller screens */
+  }
+
+  .companies-column,
+  .description-column {
+    width: 100%; /* Full width for columns on smaller screens */
+    border-right: none; /* Remove right border */
+  }
+
+  .description-column {
+    border-top: 1px solid #9c9393; /* Add top border for separation */
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-section {
+    padding-top: 20px; /* Reduce padding on smaller screens */
+  }
+
+  .companies-column,
+  .description-column {
+    padding: 20px; /* Reduce padding for better spacing */
+  }
+
+  .companies-column li {
+    padding: 8px; /* Adjust padding */
+  }
+}

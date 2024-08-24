@@ -1,0 +1,100 @@
+/* Import Slick Carousel CSS */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.otherproject {
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Center the section title */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(162, 162, 224); /* Change color if needed */
+}
+
+/* Flex layout for otherproject slider */
+.otherproject-slider {
+  position: relative;
+}
+
+.otherproject-slider-inner .slick-slide {
+  padding: 20px;
+}
+
+.slideshow-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* otherproject description below slider */
+.otherproject-description {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.otherproject-description h2 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.otherproject-description p {
+  margin: 0;
+}
+
+/* Ensure your CSS file is imported after slick-carousel CSS */
+.otherproject .slick-arrow {
+    background-color: rgba(158, 156, 160, 0.959) !important;
+    color: #1f1a1a !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 10!important;
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+  
+  .otherproject .slick-prev {
+    left: 10px !important; 
+    margin-left: 20px;
+  }
+  
+  .otherproject .slick-next {
+    right: 10px !important; 
+    margin-right: 20px;
+
+  }
+  
+  /* If using :before pseudo-elements, also override them */
+  .otherproject .slick-prev:before,
+  .otherproject .slick-next:before {
+    color: #292323 !important;
+    font-size: 20px !important; /* Adjust font size if needed */
+  }
+/* Responsive Design */
+@media (max-width: 768px) {
+  .otherproject-description {
+    padding: 0 15px;
+  }
+
+  .slick-arrow {
+    width: 25px; /* Smaller arrows for mobile */
+    height: 25px;
+  }
+
+  .slick-prev, .slick-next {
+    top: 50%; /* Center arrows vertically */
+    transform: translateY(-50%);
+  }
+}

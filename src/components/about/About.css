@@ -51,7 +51,26 @@
     flex: 1;
     padding-left: 30px;
     max-width: 100%; /* Ensure text doesn't overflow */
+    animation: slideIn 1s forwards; /* Fade-in animation */
   }
+  .about-text {
+    flex: 1;
+    padding-left: 30px;
+    max-width: 100%; /* Ensure text doesn't overflow */
+    animation: fadeInScale 1s forwards; /* Fade-in with scale animation */
+  }
+  
+  @keyframes fadeInScale {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
   
   .about-container h1 {
     font-size: 1.8rem;

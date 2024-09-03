@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
-import './Home.css';
-import Tree from '../tree/Tree';
-
-
+import './Home.scss';
+const PUBLIC_URL = process.env.PUBLIC_URL;
 const Home = () => {
     useEffect(() => {
         const letters = document.querySelectorAll('.letter');
@@ -12,7 +10,7 @@ const Home = () => {
             }, index * 80); // Delay each letter's animation
         });
     }, []);
-
+    
     const handleSeeMore = () => {
         const aboutSection = document.getElementById('about');
         if (aboutSection) {
@@ -35,17 +33,13 @@ const Home = () => {
         <section id="home" className="home">
             <div className="home-container">
                 <div className="intro-section">
-                    <h2 className="display-5 fw-bold  glowing-text text-color mb-5 name">
-                        
+                    <h2 className="display-5 fw-bold glowing-text text-color mb-5 name">
                         {letters}
-                        <svg id="bird" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="bird">
-                            <path d="M5 12l1.5 1.5L12 10l5.5 5.5L20 12l-2-2L12 6 7 11 5 12z" />
-                        </svg>
-    
+                        {/* <img src={`${PUBLIC_URL}/assets/dove-svgrepo-com.svg`} alt="Bird" className="bird-img" />  */}
                     </h2>
                     <div className="col-lg-8 mx-auto">
                         <p className="lead mb-4">
-                            I am a Full-Stack Web Developer with a passion for building and managing both the front-end and back-end of websites and web applications. My experience includes extensive work in frontend development, but I am equally enthusiastic about tackling backend challenges. You can explore some of my projects in the Projects section.
+                            I am a Full-Stack Web Developer with a passion for creating innovative and dynamic web applications. With expertise in React, JavaScript, and backend technologies, I enjoy building responsive and user-friendly interfaces.
                         </p>
                         <p className="lead mb-4">
                             I'm actively seeking job opportunities where I can leverage my skills, contribute to projects, and grow professionally. If you have an opportunity that aligns with my expertise, please don't hesitate to <strong>contact me</strong>.
@@ -59,10 +53,12 @@ const Home = () => {
                                 Projects
                             </button>
                         </div>
+                        <div className='stars'></div>
+
                     </div>
                 </div>
             </div>
-            
+        
         </section>
     );
 };

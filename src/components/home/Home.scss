@@ -1,0 +1,312 @@
+/* Home Section Styling */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap');
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    color: #fff;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeInScale 1s forwards;
+    margin-top: 60px;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.home-container {
+    text-align: center;
+    max-width: 90%;
+    padding: 0 20px;
+    line-height: 1.6;
+}
+
+.intro-section {
+    max-width: 800px;
+    padding: 30px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Add bird styles */
+// .bird {
+//     position: absolute;
+//     width: 50px;
+//     height: 50px;
+//     fill: rgb(162, 162, 224);
+//     top: 10px;
+//     right: -60px;
+//     transform: translateX(0) translateY(-100%);
+//     animation: flyIn 5s ease-in-out forwards, land 3s ease-in-out 5s forwards;
+// }
+
+/* Keyframes for flying in */
+@keyframes flyIn {
+    from {
+        right: -1000px;
+        top: 20px;
+        transform: translateX(0) translateY(-100%);
+    }
+    to {
+        right: 0%;
+        top: 0;
+        transform: translateX(50%) translateY(0);
+    }
+}
+
+/* Keyframes for landing */
+@keyframes land {
+    from {
+        transform: translateX(0) translateY(0) rotate(0);
+    }
+    to {
+        transform: translateX(0) translateY(0) rotate(0);
+    }
+}
+
+.name {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 0 1rem 1rem;
+    position: relative;
+}
+
+.name:before {
+    content: '';
+    width: 100%;
+    background: rgb(162, 162, 224);
+    opacity: 0.3;
+    bottom: 0;
+    height: 1px;
+    left: 0;
+    position: absolute;
+}
+
+.letter {
+    display: inline-block;
+    opacity: 0;
+    transform: scale(1);
+    transition: all 0.5s ease-in-out;
+}
+
+.bounce-in {
+    opacity: 1;
+    transform: scale(1);
+    animation: bounce 1s forwards;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.display-5 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgb(96, 50, 105);
+}
+
+.text-color {
+    font-family: 'Baloo 2', cursive;
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgb(162, 162, 224);
+    padding: 20px;
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .home {
+        height: auto;
+        padding: 20px;
+    }
+
+    .home-container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .intro-section {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .display-5 {
+        font-size: 2.5rem;
+    }
+
+    .text-color {
+        font-size: 2.5rem;
+    }
+}
+
+/* Button Styling */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Primary Button Styling */
+.btn-primary {
+    background-color: rgb(162, 162, 224);
+    color: #000;
+    margin-right: 20px;
+}
+
+.btn-primary:hover {
+    background-color: rgb(130, 130, 200);
+    color: #fff;
+}
+
+/* Secondary Button Styling */
+.btn-outline-secondary {
+    background-color: transparent;
+    color: rgb(162, 162, 224);
+    border: 2px solid rgb(162, 162, 224);
+}
+
+.btn-outline-secondary:hover {
+    background-color: rgb(162, 162, 224);
+    color: #000;
+}
+
+/* Responsive Design for Buttons */
+@media (max-width: 768px) {
+    .btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
+
+/* Keyframes for flying in */
+@keyframes flyOut {
+    from {
+        left: 0%;
+        top: 20px;
+        transform: translateX(0) translateY(-100%);
+    }
+    to {
+        right: -1000px;
+        top: 0;
+        transform: translateX(50%) translateY(0);
+    }
+}
+
+
+/* Starfield */
+/* Define Variables */
+$stars: 100;          // Number of stars per layer
+$speed: 3s;           // Number of seconds to transition between layers
+$width: 3000;         // Width of the starfield
+$height: 160;         // Height of the starfield
+$depth: 1000px;       // Depth for the 3D effect
+
+
+
+
+/* Starfield */
+.stars {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 2px;
+  height: 2px;
+
+  // Initialize box-shadow as an empty list
+  $box-shadow: '';
+
+  // Generate stars with random positions and brightness
+  @for $i from 1 through $stars {
+    // Check if this is the first iteration
+    @if $i == 1 {
+      $box-shadow: (random($width) - $width / 2) * 1px 
+                   (random($height) - $height / 2) * 1px 
+                   hsl(0, 0%, 75% + random(25));
+    } @else {
+      // Concatenate subsequent box-shadow values with a comma
+      $box-shadow: #{$box-shadow}, (random($width) - $width / 2) * 1px 
+                                    (random($height) - $height / 2) * 1px 
+                                    hsl(0, 0%, 75% + random(25));
+    }
+  }
+
+  // Apply the generated box-shadow list
+  box-shadow: #{$box-shadow};
+  animation: moveInward #{$speed + random(5)s} linear infinite;
+  transform-style: preserve-3d;
+
+
+  &:after {
+    transform: translateZ(-$depth);
+    animation: fadeOut #{$speed + random(5)s} linear infinite;
+    animation: moveInward #{$speed + random(5)s} linear infinite,
+    twinkle 1s ease-in-out infinite; /* Add twinkle animation */
+  }
+}
+
+/* Keyframes for Stars Moving Inward */
+@keyframes moveInward {
+  from {
+    transform: translateZ(0px) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateZ(-$depth) scale(0.5);
+    opacity: 0;
+  }
+}
+
+/* Keyframes for Fading Out */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* winkle Effect */
+@keyframes twinkle {
+    0%, 100% {
+      opacity: 1; /* Bright white at the start and end */
+    }
+    50% {
+      opacity: 0.3; /* Dimmer at the midpoint */
+    }
+  }
+
+  .bird-img {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    fill: rgb(162, 162, 224); /* This won't work directly on <img> */
+    top: 10px;
+    right: -60px;
+    transform: translateX(0) translateY(-100%);
+    animation: flyIn 5s ease-in-out forwards, land 3s ease-in-out 5s forwards;
+  }

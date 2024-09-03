@@ -23,7 +23,6 @@ const About = () => {
                             I am a Full-Stack Web Developer with a passion for building and managing both the front-end and back-end of websites and web applications. My experience includes extensive work in frontend development, but I am equally enthusiastic about tackling backend challenges. You can explore some of my projects in the Projects section.
                         </p>
                         <p>
-                            I am currently seeking opportunities to leverage my skills in innovative projects and collaborative environments. If you are looking for a dedicated developer with a passion for technology, feel free to <strong>contact me</strong>.
                         </p>
                         <div className="skills">
                             Technologies I have used:

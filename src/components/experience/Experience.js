@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import './Experience.css'; // Import the CSS file
 
 const Experience = () => {
+  const [selectedCompany, setSelectedCompany] = useState('Company A');
+  const [animationKey, setAnimationKey] = useState(0); // Key to force re-render
+
   // Sample data for companies and job descriptions
   const experiences = [
     {
@@ -18,19 +21,17 @@ const Experience = () => {
     }
   ];
 
-  // State to keep track of the selected company
-  const [selectedCompany, setSelectedCompany] = useState('Company A');
-
   // Handle click event to show the job description
   const handleCompanyClick = (company) => {
     setSelectedCompany(company);
+    setAnimationKey(prevKey => prevKey + 1); // Force re-render by changing key
   };
 
+  const description = experiences.find(exp => exp.company === selectedCompany)?.description;
+
   return (
-   
     <div id="experience" className="experience-section">
-          <div >
-         <h1>Experience</h1>
+      <h1>Experience</h1>
       <div className="experience-columns">
         <div className="companies-column">
           <h2>Companies</h2>
@@ -44,16 +45,11 @@ const Experience = () => {
         </div>
         <div className="description-column">
           <h2>Job Description</h2>
-          {selectedCompany ? (
-            <p>
-              {experiences.find(exp => exp.company === selectedCompany).description}
-            </p>
-          ) : (
-            <p>Select a company to see the job description.</p>
-          )}
+          <p key={animationKey} className="slide-in-bottom">
+            {description}
+          </p>
         </div>
       </div>
-    </div>
     </div>
   );
 };

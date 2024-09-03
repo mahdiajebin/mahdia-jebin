@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Slider from 'react-slick';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Import the carousel styles
 import './Project.css'; // Ensure the CSS file is imported correctly
 
 const PUBLIC_URL = process.env.PUBLIC_URL;
@@ -39,7 +40,7 @@ const fetchProjects = async () => {
             description: 'Description for Project 3 goes here. This is a brief overview of the project and its features.',
           }
         ]);
-      }, 1000); // Simulate a delay
+      }, 100); // Simulate a delay
     });
 
     return response;
@@ -51,8 +52,8 @@ const fetchProjects = async () => {
 const Project = () => {
   const [projects, setProjects] = useState([]);
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(
-    localStorage.getItem('selectedProjectIndex') || 0
-  ); //This checks if there's a value stored in local storage for selectedProjectIndex. If it exists, it uses that value. Otherwise, it defaults to 0.
+    parseInt(localStorage.getItem('selectedProjectIndex')) || 0
+  );
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -69,18 +70,10 @@ const Project = () => {
         setLoading(false);
       }
     };
+    
     fetchData();
-  }, []); // Empty dependency array ensures this only runs on mount
+  }, []);
 
-  // Slick slider settings
-  const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-  };
   // Handle image load errors
   const handleImageError = (e) => {
     e.target.src = 'https://via.placeholder.com/600x400'; // Fallback image
@@ -115,7 +108,6 @@ const Project = () => {
                   setSelectedProjectIndex(index);
                   localStorage.setItem('selectedProjectIndex', index);
                 }}
-              
               >
                 {project.title}
               </button>
@@ -124,9 +116,16 @@ const Project = () => {
 
           {/* Second column: Project details */}
           <div className="project-details">
-            {/* Slider for project images */}
+            {/* Carousel for project images */}
             <div className="slideshow">
-              <Slider {...sliderSettings} className="project-slider-inner">
+              <Carousel 
+                showThumbs={false}
+                showStatus={false}
+                showArrows={true}
+                infiniteLoop
+                autoPlay
+                className="project-slider-inner"
+              >
                 {projects[selectedProjectIndex].images.map((image, idx) => (
                   <div key={idx} className="slideshow-item">
                     <img 
@@ -136,10 +135,10 @@ const Project = () => {
                     />
                   </div>
                 ))}
-              </Slider>
+              </Carousel>
             </div>
 
-            {/* Project description below slider */}
+            {/* Project description below carousel */}
             <div className="project-description">
               <h2>{projects[selectedProjectIndex].title}</h2>
               <p>{projects[selectedProjectIndex].description}</p>

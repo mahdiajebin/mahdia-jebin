@@ -1,6 +1,7 @@
 /* Import Slick Carousel CSS */
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
+@import "~react-responsive-carousel/lib/styles/carousel.min.css"; 
 
 .project {
   padding: 40px;
@@ -88,9 +89,10 @@
   color: #fff;
 }
 
-/* Customizing slick arrows */
-.project .slick-arrow {
-  background-color: rgba(158, 156, 160, 0.959) !important;
+/* Customizing react-responsive-carousel arrows */
+.project .carousel-control-prev,
+.project .carousel-control-next {
+  background-color: rgba(149, 107, 192, 0.959) !important;
   color: #1f1a1a !important;
   width: 40px !important;
   height: 40px !important;
@@ -101,22 +103,25 @@
   z-index: 10 !important;
   position: absolute !important;
   top: 50% !important;
-  transform: translateY(-50%) !important;
+  opacity: 1 !important; /* Ensure arrows are fully opaque */
+  transition: opacity 0.3s ease !important; /* Transition for smooth appearance */
 }
 
-.project .slick-prev {
+.project .carousel-control-prev {
   left: 10px !important; 
 }
 
-.project .slick-next {
+.project .carousel-control-next {
   right: 10px !important; 
 }
 
 /* If using :before pseudo-elements, also override them */
-.project .slick-prev:before,
-.project .slick-next:before {
-  color: #292323 !important;
-  font-size: 20px !important; /* Adjust font size if needed */
+.project .carousel-control-prev:before,
+.project .carousel-control-next:before {
+  color: #646269 !important;
+  font-size: 20px !important; 
+  opacity: 5 !important; /* Ensure opacity stays at 1 on hover */
+
 }
 
 /* Responsive Design */
@@ -157,11 +162,10 @@
   .slideshow {
     max-width: 100%; 
     height: 200px;
-
   }
 
   .slideshow-item img {
-    height: auto;/* Ensure images maintain aspect ratio */
+    height: auto; /* Ensure images maintain aspect ratio */
   }
 
   .project-description {

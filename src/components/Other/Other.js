@@ -5,19 +5,19 @@ import './Other.css'; // Ensure the CSS file is imported correctly
 // Sample data for projects with multiple images
 const projects = [
   {
-    title: 'Project 1',
+    title: '',
     images: ['https://via.placeholder.com/300', 'https://via.placeholder.com/300', 'https://via.placeholder.com/300'],
-    description: 'Description for Project 1 goes here. This is a brief overview of the project and its features.',
+    description: 'Nature ... to add',
   },
   {
-    title: 'Project 2',
+    title: '',
     images: ['https://via.placeholder.com/300', 'https://via.placeholder.com/300', 'https://via.placeholder.com/300'],
-    description: 'Description for Project 2 goes here. This is a brief overview of the project and its features.',
+    description: 'Group Events... to add',
   },
   {
-    title: 'Project 3',
+    title: '',
     images: ['https://via.placeholder.com/300', 'https://via.placeholder.com/300', 'https://via.placeholder.com/300'],
-    description: 'Description for Project 3 goes here. This is a brief overview of the project and its features.',
+    description: 'Art... to add',
   }
 ];
 

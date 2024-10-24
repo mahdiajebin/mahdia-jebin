@@ -24,10 +24,17 @@ const About = () => {
                         </p>
                         <p>
                         </p>
+                        <div> Tools & Technologies I have used:</div>
                         <div className="skills">
-                            Technologies I have used:
+                        Java, JavaScript, TypeScript, HTML, CSS, Dart, VB.NET, Angular 12, AngularJS, ReactJS, Flutter, Spring Boot, Express.js, MySQL, MongoDB, Git, Docker, Jira, REST APIs, Agile Methodologies, Scrum
                         </div>
-                    </div>
+
+                        <br></br>
+                        <div><p> Personal Skills:  Communication, problem-solving, teamwork, adaptability, time management, critical thinking,
+                        empathy, conflict resolution, attention to detail, curiosity, and continuous learning</p>
+                        </div> 
+                        </div>
+                        
                     
                     </div>
                 </div>

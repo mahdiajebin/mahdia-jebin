@@ -19,7 +19,7 @@ const fetchProjects = async () => {
               `${PUBLIC_URL}/assets/MyDeenPics/pic1.png`,
               `${PUBLIC_URL}/assets/MyDeenPics/pic2.png`,
             ],
-            description: 'Description for Project 1 goes here. This is a brief overview of the project and its features.',
+            description: 'This is  project I did to organize my daily personal activities I do to refocus using React.',
           },
           {
             title: 'Clumsy Proof',
@@ -28,16 +28,16 @@ const fetchProjects = async () => {
               `${PUBLIC_URL}/assets/ClumsyProofPics/pic2.png`,
               `${PUBLIC_URL}/assets/ClumsyProofPics/pic3.png`,
             ],
-            description: 'Description for Project 2 goes here. This is a brief overview of the project and its features.',
+            description: 'This was a class project I did in my class use VB.net framwork. it is an website for phone case',
           },
           {
-            title: 'Project 3',
+            title: 'Adding Soon...',
             images: [
-              'https://placehold.co/600x400',
-              'https://placehold.co/600x400',
-              'https://placehold.co/600x400',
+              `${PUBLIC_URL}/assets/addingSoon.png`,
+              `${PUBLIC_URL}/assets/addingSoon.png`,
+              `${PUBLIC_URL}/assets/addingSoon.png`,
             ],
-            description: 'Description for Project 3 goes here. This is a brief overview of the project and its features.',
+            description: 'They are currently some on github I am yet to update and link here ',
           }
         ]);
       }, 100); // Simulate a delay

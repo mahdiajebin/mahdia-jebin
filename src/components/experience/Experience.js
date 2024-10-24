@@ -1,33 +1,57 @@
-import React, { useState } from 'react';
-import './Experience.css'; // Import the CSS file
+import React, { useState , useEffect} from "react";
+import "./Experience.css"; // Import the CSS file
 
 const Experience = () => {
-  const [selectedCompany, setSelectedCompany] = useState('Company A');
+  const [selectedCompany, setSelectedCompany] = useState("");
   const [animationKey, setAnimationKey] = useState(0); // Key to force re-render
 
   // Sample data for companies and job descriptions
   const experiences = [
     {
-      company: 'Company A',
-      description: 'At Company A, I was responsible for developing new features, fixing bugs, and maintaining legacy codebases. Led a team of developers and collaborated with cross-functional teams to deliver high-quality software on time.'
+      company: "Tata Consultancy Services (TCS)-Western Union",
+      description: `
+      As a Junior Developer, I contributed to the migration of
+      a large-scale Point of Sale (POS) system from AngularJS 
+      to Angular 12, with a focus on enhancing both performance
+      and maintainability. I developed dynamic and reusable
+         
+      Angular components, services, and directives that significantly
+      improved the application's user interface and overall user 
+      experience. I also integrated RESTful APIs by building robust
+      TypeScript components, ensuring seamless data consumption 
+      throughout the application. To optimize navigation,
+      I implemented Angular Router and designed secure form
+      validations using both Template Driven and Reactive Forms. My dedication to maintaining high code quality was demonstrated through extensive unit testing using Jasmine and Karma, ensuring the application was both maintainable and error-free. Working in an Agile and Scrum environment, I collaborated closely with cross-functional teams,
+      contributing to project planning, sprint reviews, and iterative development, which led to the successful delivery of project milestones and improved team adaptability.
+    `,
     },
     {
-      company: 'Company B',
-      description: 'At Company B, I focused on backend development using Spring Boot and PostgreSQL. Implemented REST APIs, optimized database queries, and ensured system scalability and performance.'
+      company: "Union Settlement",
+      description: `
+      Implemented a new Symantec security system across multiple company locations, ensuring enhanced protection against cybersecurity threats. Collaborated with IT teams to visit various company locations to assess and verify the successful deployment and functionality of the new security system. Researched and resolved security policy issues, addressing vulnerabilities that improved system reliability and maintained compliance with internal policies.
+    `,
     },
     {
-      company: 'Company C',
-      description: 'At Company C, I worked on frontend development with React.js. Developed user interfaces, integrated APIs, and worked closely with designers to create responsive and user-friendly applications.'
-    }
+      company: " Verizon Media(Oath)",
+      description: `
+    Designed and developed a diversity tracking dashboard using HTML, CSS, and JavaScript, enabling strategic analysis of the company’s diversity metrics. The dashboard was used by HR and leadership to track diversity trends and identify areas for improvement, supporting strategic decisions around hiring, re-skilling, and training initiatives to address diversity challenges. Delivered the dashboard project on time, contributing to Verizon Media’s ongoing diversity initiatives. Fostered professional relationships with colleagues, gaining insights into the tech industry and enhancing teamwork dynamics across the project.
+  `,
+    },
   ];
+  useEffect(() => {
+    setSelectedCompany(experiences[0].company);
+    setAnimationKey((prevKey) => prevKey + 1); // Force re-render to show description
+  }, []);
 
   // Handle click event to show the job description
   const handleCompanyClick = (company) => {
     setSelectedCompany(company);
-    setAnimationKey(prevKey => prevKey + 1); // Force re-render by changing key
+    setAnimationKey((prevKey) => prevKey + 1); // Force re-render by changing key
   };
 
-  const description = experiences.find(exp => exp.company === selectedCompany)?.description;
+  const description = experiences.find(
+    (exp) => exp.company === selectedCompany
+  )?.description;
 
   return (
     <div id="experience" className="experience-section">

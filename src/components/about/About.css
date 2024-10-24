@@ -84,29 +84,32 @@
     margin-bottom: 20px;
   }
   
+  /* .skills {
+    margin-top: 30px;
+    color: rgb(116, 69, 151);
+    font-size: 1.3rem;
+  } */
   .skills {
     margin-top: 30px;
-    color:rgb(116, 69, 151); ;
+    color: rgb(116, 69, 151);
     font-size: 1.3rem;
+    display: flex; /* Enable flexbox */
+    flex-wrap: wrap; /* Allow wrapping to the next line if necessary */
+    gap: 25px; /* Space between each skill */
   }
-  
+  /* TODO: use span to fix the spacing maybe */
+  .skills::before {
+    font-size: 1.8rem; /* Adjust size as needed */
+    color: rgb(84, 62, 99); /* Heading color */
+    width: 100%; /* Ensure full width for heading */
+    margin-bottom: 10px; /* Space below the heading */
+  }
+
   .skills h3 {
     font-size: 1.8rem;
     margin-bottom: 15px;
     color: rgb(84, 62, 99); /* Pinkish highlight for skills heading */
   }
-  
-  .skills ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .skills li {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-    color: #998080;
-  }
-  
   /* Responsive Design */
   @media (max-width: 768px) {
     .about-content {

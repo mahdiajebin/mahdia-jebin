@@ -6,6 +6,7 @@
 }
 
 
+@import "@fortawesome/fontawesome-free/css/all.min.css";
 
 /* Header Styling */
 .header {
@@ -62,6 +63,22 @@
     content: '💻'; 
     margin-right: 0.5rem; /* Space between icon and text */
 }
+.navbar-icon {
+    margin-left: 20px;
+    display: flex;
+    gap: 15px; /* Space between the icons */
+}
+
+/* Font Awesome icon styles */
+.navbar-icon a {
+    color: rgb(162, 162, 224);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-icon a:hover {
+    color: #cccccc; /* Optional: hover effect for icons */
+}
 
 .nav-links {
     list-style: none;
@@ -81,7 +98,6 @@
     border-radius: 5px;
     transition: all 0.3s ease;
 }
-
 .nav-links a:hover {
     background: #725d77; /* Pink highlight */
     color: #fff;

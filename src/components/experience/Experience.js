@@ -28,13 +28,13 @@ const Experience = () => {
     {
       company: "Union Settlement",
       description: `
-      Implemented a new Symantec security system across multiple company locations, ensuring enhanced protection against cybersecurity threats. Collaborated with IT teams to visit various company locations to assess and verify the successful deployment and functionality of the new security system. Researched and resolved security policy issues, addressing vulnerabilities that improved system reliability and maintained compliance with internal policies.
+      As an IT Intern , We implemented a new Symantec security system across multiple company locations, ensuring enhanced protection against cybersecurity threats. Collaborated with IT teams to visit various company locations to assess and verify the successful deployment and functionality of the new security system. Researched and resolved security policy issues, addressing vulnerabilities that improved system reliability and maintained compliance with internal policies.
     `,
     },
     {
       company: " Verizon Media(Oath)",
       description: `
-    Designed and developed a diversity tracking dashboard using HTML, CSS, and JavaScript, enabling strategic analysis of the company’s diversity metrics. The dashboard was used by HR and leadership to track diversity trends and identify areas for improvement, supporting strategic decisions around hiring, re-skilling, and training initiatives to address diversity challenges. Delivered the dashboard project on time, contributing to Verizon Media’s ongoing diversity initiatives. Fostered professional relationships with colleagues, gaining insights into the tech industry and enhancing teamwork dynamics across the project.
+    As a Software Engineer Intern, We designed and developed a diversity tracking dashboard using HTML, CSS, and JavaScript, enabling strategic analysis of the company’s diversity metrics. The dashboard was used by HR and leadership to track diversity trends and identify areas for improvement, supporting strategic decisions around hiring, re-skilling, and training initiatives to address diversity challenges. Delivered the dashboard project on time, contributing to Verizon Media’s ongoing diversity initiatives. Fostered professional relationships with colleagues, gaining insights into the tech industry and enhancing teamwork dynamics across the project.
   `,
     },
   ];

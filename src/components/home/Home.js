@@ -39,10 +39,9 @@ const Home = () => {
                     </h2>
                     <div className="col-lg-8 mx-auto">
                         <p className="lead mb-4">
-                            I am a Full-Stack Web Developer with a passion for creating innovative and dynamic web applications. With expertise in React, JavaScript, and backend technologies, I enjoy building responsive and user-friendly interfaces.
-                        </p>
+                        <p> As a results-driven Full-Stack Web Developer, I specialize in creating impactful, user-friendly applications that blend innovation with technical precision. Leveraging my expertise in front-end technologies like React and Angular, along with back-end solutions in Spring Boot, I am committed to building solutions that enhance user experience and drive success. Actively seeking opportunities where I can apply my skills and grow professionally, I am excited to connect with teams looking for a dedicated developer who values quality, creativity, and continuous improvement. If you're hiring, I’d love to discuss how my skills can contribute to your goals. </p>                        </p>
                         <p className="lead mb-4">
-                            I'm actively seeking job opportunities where I can leverage my skills, contribute to projects, and grow professionally. If you have an opportunity that aligns with my expertise, please don't hesitate to <strong>contact me</strong>.
+                           If you have an opportunity that aligns with my expertise, please don't hesitate to <strong>contact me</strong>.
                         </p>
                         <div><br></br></div>
                         <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">

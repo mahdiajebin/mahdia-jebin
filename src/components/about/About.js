@@ -20,7 +20,9 @@ const About = () => {
                     </div>
                     <div className="about-text">
                         <p>
-                            I am a Full-Stack Web Developer with a passion for building and managing both the front-end and back-end of websites and web applications. My experience includes extensive work in frontend development, but I am equally enthusiastic about tackling backend challenges. You can explore some of my projects in the Projects section.
+                            I am a Full-Stack Web Developer with a passion for building dynamic and intuitive web applications, specializing in both front-end and back-end development.
+                            With strong skills in Angular and React for front-end frameworks, and Spring Boot for backend solutions, I develop scalable, high-quality applications that 
+                            deliver excellent user experiences. Currently, I am advancing my expertise through <a style={{ color: 'white', textDecoration: 'underline' }} href="https://www.npower.org/" target="_blank">NPower's</a> Full Stack Development course, as well as courses in IT automation, Data Analysis, and AI on <a href="https://www.coursera.org/" target="_blank" style={{ color: 'white', textDecoration: 'underline' }}> Coursera </a>. As I seek my next professional opportunity, I am excited to apply my skills to create innovative solutions. Explore my projects below to see my work in action!
                         </p>
                         <p>
                         </p>

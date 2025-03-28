@@ -12,11 +12,11 @@ const About = () => {
                 <div className="about-content">
                     
                     <div className="about-info">
-                        <img 
+                        {/* <img 
                             src="https://via.placeholder.com/300" 
                             alt="Profile" 
                             className="profile-pic"
-                        />
+                        /> */}
                     </div>
                     <div className="about-text">
                         <p>

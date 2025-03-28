@@ -19,9 +19,7 @@ const Experience = () => {
       improved the application's user interface and overall user 
       experience. I also integrated RESTful APIs by building robust
       TypeScript components, ensuring seamless data consumption 
-      throughout the application. To optimize navigation,
-      I implemented Angular Router and designed secure form
-      validations using both Template Driven and Reactive Forms. My dedication to maintaining high code quality was demonstrated through extensive unit testing using Jasmine and Karma, ensuring the application was both maintainable and error-free. Working in an Agile and Scrum environment, I collaborated closely with cross-functional teams,
+      throughout the application.I collaborated closely with cross-functional teams,
       contributing to project planning, sprint reviews, and iterative development, which led to the successful delivery of project milestones and improved team adaptability.
     `,
     },

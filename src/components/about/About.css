@@ -84,32 +84,49 @@
     margin-bottom: 20px;
   }
   
-  /* .skills {
-    margin-top: 30px;
-    color: rgb(116, 69, 151);
-    font-size: 1.3rem;
-  } */
-  .skills {
-    margin-top: 30px;
-    color: rgb(116, 69, 151);
-    font-size: 1.3rem;
-    display: flex; /* Enable flexbox */
-    flex-wrap: wrap; /* Allow wrapping to the next line if necessary */
-    gap: 25px; /* Space between each skill */
-  }
-  /* TODO: use span to fix the spacing maybe */
-  .skills::before {
-    font-size: 1.8rem; /* Adjust size as needed */
-    color: rgb(84, 62, 99); /* Heading color */
-    width: 100%; /* Ensure full width for heading */
-    margin-bottom: 10px; /* Space below the heading */
-  }
 
-  .skills h3 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: rgb(84, 62, 99); /* Pinkish highlight for skills heading */
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Adjust spacing */
+    margin-top: 10px;
   }
+  
+  .skill-box {
+    padding: 10px 15px;
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Transparent border */
+    border-radius: 8px;
+    backdrop-filter: blur(10px); /* Glass effect */
+    background:rgba(168, 121, 182, 0.274); /* Semi-transparent background */
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    min-width: 100px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .skill-box:hover {
+    transform: scale(1.1);
+    background: rgba(168, 121, 182, 0.842);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .skills-container {
+      justify-content: center;
+    }
+  
+    .skill-box {
+      font-size: 12px;
+      padding: 8px 12px;
+      min-width: 80px;
+    }
+  }
+  
+  
   /* Responsive Design */
   @media (max-width: 768px) {
     .about-content {
@@ -129,8 +146,6 @@
       padding-right: 0; /* Added to avoid overflow */
     }
   
-    .skills {
-      margin-top: 20px;
-    }
+ 
   }
   

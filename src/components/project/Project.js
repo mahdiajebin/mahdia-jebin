@@ -13,13 +13,13 @@ const fetchProjects = async () => {
       setTimeout(() => {
         resolve([
           {
-            title: 'My Deen',
+            title: 'Weather-App',
             images: [
-              `${PUBLIC_URL}/assets/MyDeenPics/pic0.png`,
-              `${PUBLIC_URL}/assets/MyDeenPics/pic1.png`,
-              `${PUBLIC_URL}/assets/MyDeenPics/pic2.png`,
+              `${PUBLIC_URL}/assets/Weather-app.jpg`,
+      
             ],
-            description: 'This is  project I did to organize my daily personal activities I do to refocus using React.',
+            description: 'We did Project as Part of learning how to use public API.',
+            gitlink: 'https://github.com/mahdiajebin/Weather-App-Template',
           },
           {
             title: 'Clumsy Proof',
@@ -29,6 +29,8 @@ const fetchProjects = async () => {
               `${PUBLIC_URL}/assets/ClumsyProofPics/pic3.png`,
             ],
             description: 'This was a class project I did in my class use VB.net framwork. it is an website for phone case',
+            gitlink: 'https://github.com/mahdiajebin/ClumsyProofVB.net',
+
           },
           {
             title: 'Adding Soon...',
@@ -38,6 +40,8 @@ const fetchProjects = async () => {
               `${PUBLIC_URL}/assets/addingSoon.png`,
             ],
             description: 'They are currently some on github I am yet to update and link here ',
+            gitlink: 'https://github.com/mahdiajebin/Weather-App-Template',
+
           }
         ]);
       }, 100); // Simulate a delay
@@ -142,6 +146,16 @@ const Project = () => {
             <div className="project-description">
               <h2>{projects[selectedProjectIndex].title}</h2>
               <p>{projects[selectedProjectIndex].description}</p>
+              <p>
+                 GitHub Link:{" "}
+                <a
+                  href={projects[selectedProjectIndex].gitlink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {projects[selectedProjectIndex].gitlink}
+              </a>
+              </p>
             </div>
           </div>
         </div>

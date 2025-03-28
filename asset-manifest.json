@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/mahdia-jebin/static/css/main.e826f361.css",
-    "main.js": "/mahdia-jebin/static/js/main.ef7264b6.js",
+    "main.css": "/mahdia-jebin/static/css/main.616dd390.css",
+    "main.js": "/mahdia-jebin/static/js/main.07fd8f49.js",
     "static/js/453.e6a442b9.chunk.js": "/mahdia-jebin/static/js/453.e6a442b9.chunk.js",
     "static/media/fa-solid-900.ttf": "/mahdia-jebin/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
     "static/media/fa-brands-400.ttf": "/mahdia-jebin/static/media/fa-brands-400.0ff70dcbf135d859ebf3.ttf",
@@ -16,12 +16,12 @@
     "static/media/slick.ttf": "/mahdia-jebin/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/mahdia-jebin/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/mahdia-jebin/index.html",
-    "main.e826f361.css.map": "/mahdia-jebin/static/css/main.e826f361.css.map",
-    "main.ef7264b6.js.map": "/mahdia-jebin/static/js/main.ef7264b6.js.map",
+    "main.616dd390.css.map": "/mahdia-jebin/static/css/main.616dd390.css.map",
+    "main.07fd8f49.js.map": "/mahdia-jebin/static/js/main.07fd8f49.js.map",
     "453.e6a442b9.chunk.js.map": "/mahdia-jebin/static/js/453.e6a442b9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e826f361.css",
-    "static/js/main.ef7264b6.js"
+    "static/css/main.616dd390.css",
+    "static/js/main.07fd8f49.js"
   ]
 }

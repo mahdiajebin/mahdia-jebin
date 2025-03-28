@@ -11,7 +11,7 @@ const Experience = () => {
       company: "Tata Consultancy Services (TCS)-Western Union",
       description: `
       As a Junior Developer, I contributed to the migration of
-      a large-scale Point of Sale (POS) system from AngularJS 
+      legacy system from AngularJS 
       to Angular 12, with a focus on enhancing both performance
       and maintainability. I developed dynamic and reusable
          

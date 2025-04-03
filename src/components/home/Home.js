@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import './Home.scss';
-const PUBLIC_URL = process.env.PUBLIC_URL;
 const Home = () => {
     useEffect(() => {
         const letters = document.querySelectorAll('.letter');

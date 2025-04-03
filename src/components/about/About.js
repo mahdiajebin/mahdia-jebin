@@ -22,7 +22,7 @@ const About = () => {
                         <p>
                             I am a Full-Stack Web Developer with a passion for building dynamic and intuitive web applications, specializing in both front-end and back-end development.
                             With strong skills in Angular and React for front-end frameworks, and Spring Boot for backend solutions, I develop scalable, high-quality applications that 
-                            deliver excellent user experiences. Currently, I am advancing my expertise through <a style={{ color: 'white', textDecoration: 'underline' }} href="https://www.npower.org/" target="_blank">
+                            deliver excellent user experiences. Currently, I am advancing my expertise through <a style={{ color: 'white', textDecoration: 'underline' }} href="https://www.npower.org/" target="_blank " rel="noreferrer">
                             NPower's</a> Full Stack Development course. As I seek my next professional opportunity, I am excited to apply my skills to create innovative solutions. Explore my projects below to see my work in action!
                         </p>
                         <p>

@@ -1,12 +1,12 @@
-import React, { useState , useEffect} from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Experience.css"; // Import the CSS file
 
 const Experience = () => {
   const [selectedCompany, setSelectedCompany] = useState("");
-  const [animationKey, setAnimationKey] = useState(0); // Key to force re-render
+  const [animationKey, setAnimationKey] = useState(0);
 
-  // Sample data for companies and job descriptions
-  const experiences = [
+  // Store experiences in useRef to avoid unnecessary re-renders
+  const experiences = useRef([
     {
       company: "Tata Consultancy Services (TCS)-Western Union",
       description: `
@@ -35,19 +35,19 @@ const Experience = () => {
     As a Software Engineer Intern, We designed and developed a diversity tracking dashboard using HTML, CSS, and JavaScript, enabling strategic analysis of the company’s diversity metrics. The dashboard was used by HR and leadership to track diversity trends and identify areas for improvement, supporting strategic decisions around hiring, re-skilling, and training initiatives to address diversity challenges. Delivered the dashboard project on time, contributing to Verizon Media’s ongoing diversity initiatives. Fostered professional relationships with colleagues, gaining insights into the tech industry and enhancing teamwork dynamics across the project.
   `,
     },
-  ];
-  useEffect(() => {
-    setSelectedCompany(experiences[0].company);
-    setAnimationKey((prevKey) => prevKey + 1); // Force re-render to show description
-  }, []);
+  ]);
 
-  // Handle click event to show the job description
+  useEffect(() => {
+    setSelectedCompany(experiences.current[0].company);
+    setAnimationKey((prevKey) => prevKey + 1);
+  }, [experiences]); // No infinite loop because useRef does not trigger re-renders
+
   const handleCompanyClick = (company) => {
     setSelectedCompany(company);
-    setAnimationKey((prevKey) => prevKey + 1); // Force re-render by changing key
+    setAnimationKey((prevKey) => prevKey + 1);
   };
 
-  const description = experiences.find(
+  const description = experiences.current.find(
     (exp) => exp.company === selectedCompany
   )?.description;
 
@@ -58,7 +58,7 @@ const Experience = () => {
         <div className="companies-column">
           <h2>Companies</h2>
           <ul>
-            {experiences.map((exp, index) => (
+            {experiences.current.map((exp, index) => (
               <li key={index} onClick={() => handleCompanyClick(exp.company)}>
                 {exp.company}
               </li>

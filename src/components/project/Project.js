@@ -33,6 +33,18 @@ const fetchProjects = async () => {
 
           },
           {
+            title: 'House Of Noor',
+            images: [
+              `${PUBLIC_URL}/assets/HouseOfNoorPics//pic1.png`,
+              `${PUBLIC_URL}/assets/HouseOfNoorPics/pic2.png`,
+              `${PUBLIC_URL}/assets/HouseOfNoorPics//pic3.png`,
+            ],
+            description: 'An E-Commerce project using React, Strapi, Firebase I am stil working on the project but heres Whats working',
+            gitlink: 'https://github.com/mahdiajebin/HouseOfNoor |  https://github.com/mahdiajebin/StrapiHouseOfNoor',
+
+          }
+          ,
+          {
             title: 'Adding Soon...',
             images: [
               `${PUBLIC_URL}/assets/addingSoon.png`,
